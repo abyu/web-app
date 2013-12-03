@@ -1,21 +1,10 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="webApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title></title>
   <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
+   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
@@ -25,5 +14,16 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+</head>
+<body>
+  
+  <div ng-view></div>
+  
+  <div ng-controller="Footer">
+      <span ng-repeat="navigation in navigations" class="footer_link">
+        <a href="{{nagivation.url}}">{{navigation.display_text}}</a> {{navigation.separator}} 
+      </span>
+  </div>
+
 </body>
 </html>

@@ -1,16 +1,18 @@
 'use strict';
 
-
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('webApp', [
   'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
+  'webApp.filters',
+  'webApp.services',
+  'webApp.directives',
+  'webApp.controllers'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'Greet'});
+  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'Greet'});
+  $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'Home'})
+  $routeProvider.otherwise({redirectTo: '/home'});
+
+ $locationProvider.html5Mode(true);
 }]);
