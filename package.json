@@ -1,7 +1,10 @@
 {
-  "name": "angularjs-seed",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "name": "web-app",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+    }
   "devDependencies": {
     "phantomjs" : "~1.9",
     "karma" : "~0.10",
