@@ -90,13 +90,14 @@ StaticServlet.prototype.handleRequest = function(req, res) {
   var path = ('./' + req.url.pathname).replace('//','/').replace(/%(..)/g, function(match, hex){
     return String.fromCharCode(parseInt(hex, 16));
   });
+  path = "app/" + path;
   util.puts(path);
   var parts = path.split('/');
   if (parts[parts.length-1].charAt(0) === '.')
     return self.sendForbidden_(req, res, path);
   fs.stat(path, function(err, stat) {
     if (err)
-      return self.sendFile_(req, res, 'index.html');
+      return self.sendFile_(req, res, 'app/index.html');
     if (stat.isDirectory())
       return self.sendDirectory_(req, res, path);
     return self.sendFile_(req, res, path);
