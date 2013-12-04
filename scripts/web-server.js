@@ -99,7 +99,7 @@ StaticServlet.prototype.handleRequest = function(req, res) {
     if (err)
       return self.sendFile_(req, res, 'app/index.html');
     if (stat.isDirectory())
-      return self.sendDirectory_(req, res, path);
+      return self.sendFile_(req, res, 'app/index.html');
     return self.sendFile_(req, res, path);
   });
 }
