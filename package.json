@@ -4,7 +4,7 @@
   "engines": {
     "node": "0.10.x",
     "npm": "1.2.x"
-    }
+    },
   "devDependencies": {
     "phantomjs" : "~1.9",
     "karma" : "~0.10",
