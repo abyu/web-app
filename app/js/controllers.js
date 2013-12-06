@@ -3,7 +3,10 @@
 /* Controllers */
 
 angular.module('webApp.controllers', []).
-  controller('Greet', ["$scope", function($scope) {
+  controller('AboutUs', ["$scope", function($scope) {
+  	$scope.greet = "Hello";
+  }]).
+  controller('ContactUs', ["$scope", function($scope) {
   	$scope.greet = "Hello";
   }]).
   controller('Home', ["$scope", function($scope) {
@@ -11,11 +14,11 @@ angular.module('webApp.controllers', []).
   }]).
   controller('Footer', ["$scope", function($scope) {
   	$scope.navigations = [
-  		{'url': '', 'display_text': 'Home', 'separator': '|'},
-  		{'url': '', 'display_text': 'About us', 'separator': '|'},
+  		{'url': '/home', 'display_text': 'Home', 'separator': '|'},
+  		{'url': '/about', 'display_text': 'About us', 'separator': '|'},
   		{'url': '', 'display_text': 'Privacy Policy', 'separator': '|'},
   		{'url': '', 'display_text': 'Terms and Conditions', 'separator': '|'},
-  		{'url': '', 'display_text': 'Contact us', 'separator': ''},
+  		{'url': '/contact', 'display_text': 'Contact us', 'separator': ''},
   	];
   }])
   ;

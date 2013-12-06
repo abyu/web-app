@@ -9,8 +9,8 @@ angular.module('webApp', [
   'webApp.controllers'
 ]).
 config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'Greet'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'Greet'});
+  $routeProvider.when('/about', {templateUrl: 'partials/about_us.html', controller: 'AboutUs'});
+  $routeProvider.when('/contact', {templateUrl: 'partials/contact_us.html', controller: 'ContactUs'});
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'Home'})
   $routeProvider.otherwise({redirectTo: '/home'});
 

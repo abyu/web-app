@@ -21,7 +21,7 @@
   
   <div ng-controller="Footer">
       <span ng-repeat="navigation in navigations" class="footer_link">
-        <a href="{{nagivation.url}}">{{navigation.display_text}}</a> {{navigation.separator}} 
+        <a href={{navigation.url}}>{{navigation.display_text}}</a> {{navigation.separator}} 
       </span>
   </div>
 
