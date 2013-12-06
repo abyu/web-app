@@ -7,7 +7,7 @@ angular.module('webApp.controllers', []).
   	$scope.greet = "Hello";
   }]).
   controller('Home', ["$scope", function($scope) {
-  	
+  	$scope.origin_location = "Bangalore"
   }]).
   controller('Footer', ["$scope", function($scope) {
   	$scope.navigations = [
