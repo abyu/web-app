@@ -12,7 +12,8 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
   $routeProvider.when('/about', {templateUrl: 'partials/about_us.html', controller: 'AboutUs'});
   $routeProvider.when('/contact', {templateUrl: 'partials/contact_us.html', controller: 'ContactUs'});
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'Home'})
+  $routeProvider.when('/home/:name', {templateUrl: 'partials/home.html', controller: 'Home1'} )
   $routeProvider.otherwise({redirectTo: '/home'});
 
- $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true).hashPrefix('!');
 }]);

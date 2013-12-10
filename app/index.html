@@ -2,6 +2,7 @@
 <html lang="en" ng-app="webApp">
 <head>
   <meta charset="utf-8">
+  <base href="/">
   <title>Itenarize</title>
   <link rel="stylesheet" href="css/app.css"/>
    <!-- In production use:
@@ -16,6 +17,11 @@
   <script src="js/directives.js"></script>
 </head>
 <body>
+  <div ng-controller="Header">
+    <span ng-repeat="navigation in navigations" class="footer_link">
+        <a href={{navigation.url}}>{{navigation.display_text}}</a> {{navigation.separator}} 
+      </span>
+  </div>
   
   <div ng-view></div>
   
