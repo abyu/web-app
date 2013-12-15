@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <base href="/">
   <title>Itenarize</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/app.css"/>
+  <!-- Bootstrap -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
    <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
@@ -15,21 +19,25 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div ng-controller="Header">
-    <span ng-repeat="navigation in navigations" class="footer_link">
-        <a href={{navigation.url}}>{{navigation.display_text}}</a> {{navigation.separator}} 
-      </span>
+  <div class="container main">
+    <div ng-controller="Header" class="header">
+      <span ng-repeat="navigation in navigations" class="header_link">
+          <a href={{navigation.url}}>{{navigation.display_text}}</a> {{navigation.separator}} 
+        </span>
+    </div>
+    
+    <div ng-view></div>
+    
+    <footer>
+    <div ng-controller="Footer" class="footer">
+        <span ng-repeat="navigation in navigations" class="footer_link">
+          <a href={{navigation.url}}>{{navigation.display_text}}</a> {{navigation.separator}} 
+        </span>
+    </div>
+    </footer>
   </div>
-  
-  <div ng-view></div>
-  
-  <div ng-controller="Footer">
-      <span ng-repeat="navigation in navigations" class="footer_link">
-        <a href={{navigation.url}}>{{navigation.display_text}}</a> {{navigation.separator}} 
-      </span>
-  </div>
-
 </body>
 </html>

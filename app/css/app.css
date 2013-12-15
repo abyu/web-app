@@ -33,3 +33,39 @@
   text-decoration: none;
 }
 
+.footer {
+  text-align: center;
+}
+
+.header {
+  text-align: right;
+}
+
+.main {
+  text-align: center;
+}
+
+.home{
+  background-image:  url('../img/worldmap.png');
+}
+
+.hints div{
+  border: 1px ridge;
+  padding: 1px;
+}
+
+.top{
+  height: 32em;
+}
+
+.trv_origin{
+  position: relative;
+top: 12%;
+left: 27%;
+}
+
+.middle {
+  position: relative;
+top: 40%;
+
+}
